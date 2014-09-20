@@ -54,6 +54,7 @@ int main()
 		zombies[i].is_moving = FALSE;
 		zombies[i].balancer = 0;
 		zombies[i].posX = -1;
+		zombies[i].posY = -1;
 	}
 
 	//color initalizations
@@ -126,6 +127,7 @@ int main()
 		switch(ch)
 		{
 		case KEY_UP:
+		case 'q':
 			if(posY - 1 > 1)
 			{
 				map[posY][posX] = ' ';
@@ -134,6 +136,7 @@ int main()
 			}
 			break;
 		case KEY_DOWN:
+		case 'a':
 			if(posY + 1 < 23)
 			{
 				map[posY][posX] = ' ';
